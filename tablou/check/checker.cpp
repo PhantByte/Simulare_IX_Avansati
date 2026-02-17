@@ -43,9 +43,6 @@ bool check_solution(int N, int S,
 
 int main(int argc, char** argv) {
 
-    fprintf(stderr, "Correct solution!\n");
-    printf("1.0\n");
-    return 0;
     if (argc < 4) {
         fprintf(stderr, "Usage: checker <input_file> <expected_file> <contestant_output_file>\n");
         return 1;
