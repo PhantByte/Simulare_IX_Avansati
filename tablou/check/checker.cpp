@@ -48,8 +48,11 @@ int main(int argc, char** argv) {
     FILE* fout = fopen(argv[3], "r");   // contestant output file
 
     if (!fin || !fexp || !fout) {
+        
         fprintf(stderr, "Error opening files\n");
-        return 1;
+        fprintf(stderr, "Incorrect solution!\n");
+        printf("0.0\n");
+        return 0;
     }
 
     // ===================
@@ -58,7 +61,9 @@ int main(int argc, char** argv) {
     int N, S;
     if (fscanf(fin, "%d %d", &N, &S) != 2) {
         fprintf(stderr, "Failed to read N and S\n");
-        return 1;
+        fprintf(stderr, "Incorrect solution!\n");
+        printf("0.0\n");
+        return 0;
     }
 
 
@@ -69,7 +74,9 @@ int main(int argc, char** argv) {
     int first_val;
     if (fscanf(fexp, "%d", &first_val) != 1) {
         fprintf(stderr, "Failed to read expected solution\n");
-        return 1;
+        fprintf(stderr, "Incorrect solution!\n");
+        printf("0.0\n");
+        return 0;
     }
     if(first_val == 0)
     {
@@ -85,7 +92,9 @@ int main(int argc, char** argv) {
                 if(i == 0 && j == 0) continue;
                 if (fscanf(fexp, "%d", &expected[i][j]) != 1) {
                     fprintf(stderr, "Failed to read expected solution\n");
-                    return 1;
+                    fprintf(stderr, "Incorrect solution!\n");
+                    printf("0.0\n");
+                    return 0;
                 }
             }
     }
@@ -95,10 +104,12 @@ int main(int argc, char** argv) {
     // ===================
     if (fscanf(fout, "%d", &first_val) != 1) {
         fprintf(stderr, "Failed to read contestant output\n");
+        fprintf(stderr, "Incorrect solution!\n");
+        printf("0.0\n");
         fclose(fin);
         fclose(fexp);
         fclose(fout);
-        return 1;
+        return 0;
     }
     if(first_val == 0)
     {
