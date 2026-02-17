@@ -1,4 +1,5 @@
 #include <cstdio>
+#include <cstdlib>
 #include <vector>
 #include <map>
 #include <set>
@@ -42,12 +43,6 @@ bool check_solution(int N, int S,
 }
 
 int main(int argc, char** argv) {
-
-    if (argc < 4) {
-        fprintf(stderr, "Usage: checker <input_file> <expected_file> <contestant_output_file>\n");
-        return 1;
-    }
-
     FILE* fin = fopen(argv[1], "r");    // input file
     FILE* fexp = fopen(argv[2], "r");   // expected solution file
     FILE* fout = fopen(argv[3], "r");   // contestant output file
