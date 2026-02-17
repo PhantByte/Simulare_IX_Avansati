@@ -1,0 +1,17 @@
+name: "SimulareCNVA_IX"
+description: "Simulare OJI IX - CNVA"
+tasks:
+  - "bip"
+  - "potcoave"
+  - "tablou"
+users:
+  - username: "GeorgePahonie"
+    password: "CatalinFrancu"
+    ip: null  
+  - username: "IngridLazar"
+    password: "DanPracsiu"
+    ip: null  
+  - username: "LucaVartolomei"
+    password: "CentroidDecomposition"
+    ip: null  
+token_mode: disabled

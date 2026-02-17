@@ -1,0 +1,9 @@
+name: "potcoave"
+title: "Potcoave"
+time_limit: 1
+memory_limit: 4
+n_input: 21
+public_testcases: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+infile: "potcoave.in"
+outfile: "potcoave.out"
+token_mode: infinite
